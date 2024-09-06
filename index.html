@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTSi</title>
+    
+    <style>
+
+
+ .twitter-timeline{
+  position:absolute;
+  top:280px;
+  left:0px;
+
+
+                                        }     
+
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  overflow: hidden;
+}
+ 
+@keyframes slideshow{
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  28%{
+    opacity: 1
+  }
+  38%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+ 
+.slide img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation :slideshow 24s linear infinite;
+}
+ 
+.slide img:nth-child(2){
+  animation-delay: 8s;
+}
+ 
+.slide img:last-child{
+  animation-delay: 16s;
+}
+      
+     
+      
+
+     /* 背景色指定 */
+
+
+
+
+
+
+
+
+
+                               
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.animate__animated {color:green;}
+
+     .ttt{color:blue;}
+
+       
+        
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .sss{position: absolute;
+    top: 80px;
+    left: 30px;
+    font-size:50px;
+    
+
+}
+
+
+
+
+   .ttt{position: absolute;
+    top: 380px;
+    left: 30px;
+    font-size:50px;}
+
+
+    .rrr{
+    position: absolute;
+    top: 0px;
+    left: 350px;
+    font-size:50px;
+
+    color: ivory;
+
+}
+
+
+
+    .fff{position: absolute;
+    top: 1100px;
+    left: 1030px;
+    font-size:30px;
+     color:blue;
+    }
+
+   .kkk {color:red;}
+
+   .kkk{position: absolute;
+    top: 480px;
+    left: 900px;}
+
+
+    .fa-bars {position :absolute;
+    top :0px
+    left 600px;
+
+  }
+
+    .rrr{
+      
+      display:inline block;
+
+      padding-bottom:.25rem;
+
+      background:rgba(8, 12, 255, 0.459);
+
+
+    }
+    
+    .sss {display:inline block;  
+
+background:rgba(6, 244, 244, 0.251);
+
+padding-bottom:.25rem;}
+
+
+
+.ttt{display:inline block;
+
+background-image: linear-gradient(transparent 1%,yellow 130%);
+
+padding-bottom:.25rem;}
+
+.btn>a{
+
+  color:darkgreen;
+  
+  padding: 10px;
+
+  background-color: #5fb2c1;
+
+  box-shadow: 0 7px  6px  #3b8a98;
+
+  font-size: 1.5rem;
+
+  top :-4px;
+
+   border-radius: 4px;
+
+   width: 130px;
+  height: 120px;
+
+display:inline-flex;
+
+
+}
+
+.btn>a:hover{box-shadow: 0 1px blue;
+top:1px;
+
+transition: 3s;
+
+background-color: yellow;}
+
+.btn{position: absolute;
+    top: 420px;
+    left: 1030px;}
+
+    .fa-bars{
+
+      position: absolute;
+
+      top:20px;
+      left:1130px;
+    }
+
+    .drawer_open {
+  display: flex;
+  top: 71px;
+  right: 50px;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  z-index: 100;/* 重なり順を一番上にする */
+  
+  cursor:pointer;
+    }
+
+
+
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display:black;
+  height: 10px;
+  width: 40px;
+  border-radius: 3px;
+  background:black;
+  transition: 0.5s;
+  position: absolute;
+}
+
+
+
+
+.drawer_open span:before {
+  bottom:13px;
+
+ 
+}
+
+
+.drawer_open span:after {
+  top: 13px;
+}
+
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0px;
+  transform: rotate(45deg);
+
+  
+
+ 
+}
+
+
+
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0px;
+  transform: rotate(-45deg);
+
+
+ 
+}
+
+
+
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+
+  right:260px;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #fff;
+  transition: .5s;
+}
+
+#drawer_input:checked ~ .nav_content {
+  left: 0;/* メニューを画面に入れる */
+}
+
+.drawer_hidden {
+  display: none;
+}
+
+
+.nav_item2{position:absolute;
+
+top:120px;
+
+left:600px;
+
+font-size: 40px;
+}
+
+.nav_item1{position:absolute;
+
+top:40px;
+
+left:600px;
+
+font-size: 40px;
+
+color:yellow;
+
+font-family:cursive
+}
+
+
+.nav_item4{position:absolute;
+
+
+  top:280px;
+
+  left:600px;
+
+  font-size:40px;
+
+
+  color:olive;
+
+  font-family: inherit;
+
+
+
+
+
+}
+
+
+.nav_item3{position:absolute;
+
+top:200px;
+
+left:600px;
+
+font-size: 40px;
+
+color:red;
+
+font-family:fantasy;
+}
+
+.level2{color: aqua;}
+
+.level1{color: salmon;}
+
+.level3{color:slateblue}
+
+
+
+  </style>
+
+
+
+<script src="https://kit.fontawesome.com/a6456e74f8.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+
+
+  />
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+
+
+
+</head>
+<body>
+
+
+
+
+  <div class="slide">
+    <img src="bts-family-6.jpg" alt="">
+    <img src="cba69d01a81aa1123c9d0a5e7aaee95c.jpg" alt="">
+    <img src="91yxyjw+1-S._AC_SL1500_.jpg" alt="">
+
+  </div>
+ 
+  
+
+
+
+
+  
+<div class="example2">
+
+
+<h1 class="animate__animated rrr animate__bounceInUp  animate__delay-00.9s">BTSの世界へようこそ</h1>
+
+<ul class="animate__animated sss animate__zoomInDown animate__delay-00.5ams"><li>jungkook</li><li>TETE</li><li>JIMIN</li><li>JIN</li></ul>
+
+<ul class="animate__animated ttt animate__lightSpeedInRight animate__delay-1s"><li>SUGA</li><li>J-HOPE</li><li>RM</li></ul>
+
+
+<p class="animate__animated  fff animate__backInLeft">2024/2/20</p>
+
+
+
+
+
+
+
+
+</div>
+
+
+<header class="header">
+  <!-- ヘッダーロゴ --
+
+  <!-- ハンバーガーメニュー部分 -->
+  <div class="nav">
+
+    <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+    <input id="drawer_input" class="drawer_hidden" type="checkbox">
+
+    <!-- ハンバーガーアイコン -->
+    <label for="drawer_input" class="drawer_open"><span></span></label>
+
+    <nav class="nav_content">
+      <ul class="nav_list">
+        <li class="nav_item1"><a class="level1" href=>TOP</a></li>
+        <li class="nav_item2"><a class="level2" href="https://bts-official.jp/news/" >NEWS</a></li>
+        <li class="nav_item3"><a class="level3" href="https://bts-official.jp/myaccount/login.php">PHOTO</a></li>
+        <li class="nav_item4"><a href="https://bts-official.jp/schedule/">schedule</a></li>
+
+        </ul>
+      
+    
+
+       <p class="btn"><a href="https://www.bing.com/ck/a?!&&p=a5e19dc5bff98e21JmltdHM9MTcwODkwNTYwMCZpZ3VpZD0zYmQ4YThkNy0wZTJjLTY5YjktM2U1Yi1hNjYwMGZiZDY4NzcmaW5zaWQ9NTIwNg&ptn=3&ver=2&hsh=3&fclid=3bd8a8d7-0e2c-69b9-3e5b-a6600fbd6877&psq=bts%e5%85%ac%e5%bc%8f%e3%82%b5%e3%82%a4%e3%83%88&u=a1aHR0cHM6Ly9idHMtb2ZmaWNpYWwuanAv&ntb=1">ファンサイトはこちら</a></p>
+
+       <a class="twitter-timeline" data-lang="en" data-width="350" data-height="350" data-dnt="true" href="https://twitter.com/bts_bighit?ref_src=twsrc%5Etfw">Tweets by bts_bighit</a> 
+       <i class="fa brands fa-youtube  kkk fa-7x"></i>
+
+       <a class="fa brands fa-youtube  kkk fa-7x" href= https://www.bing.com/ck/a?!&&p=36044a59b58c2f41JmltdHM9MTcxMDExNTIwMCZpZ3VpZD0zNjY2OWY5Ni03NzI0LTYwOGYtMTI1Ny04YmFmNzY1ZjYxZjUmaW5zaWQ9NTIwNg&ptn=3&ver=2&hsh=3&fclid=36669f96-7724-608f-1257-8baf765f61f5&psq=bts+youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vdXNlci9CQU5HVEFOVFY&ntb=1></a>
+     
+        <iframe width="260" height="260" src="https://www.youtube.com/embed/gdZLi9oWNZg?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   
+      </ul>
+      </nav>
+
+    </header>
+
+    </div>
+   
+ 
+ 
+
+</header>
+
+
+
+
+</body>
+</html>
